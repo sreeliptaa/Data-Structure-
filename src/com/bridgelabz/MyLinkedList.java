@@ -1,7 +1,5 @@
 package com.bridgelabz;
 
-import java.security.Key;
-
 // method for create linked list
 public class MyLinkedList {
     public INode head;
@@ -47,9 +45,10 @@ public class MyLinkedList {
     }
 
     // method for delete the first node
-    public void pop() {
+    public INode pop() {
         INode tempNode = this.head;
         this.head = head.getNext();
+        return tempNode;
     }
 
     // method for delete the last node
