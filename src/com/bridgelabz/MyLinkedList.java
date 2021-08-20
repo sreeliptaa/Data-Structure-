@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.security.Key;
+
 // method for create linked list
 public class MyLinkedList {
     public INode head;
@@ -58,6 +60,17 @@ public class MyLinkedList {
         }
         this.tail=tempNode;
         tempNode.setNext(null);
+    }
+
+    //method for search element in linked list
+    public INode search() {
+        INode tempNode = head;
+        while (tempNode != null && tempNode.getNext() != null) {
+            if (tempNode.getKey().equals(head)) {
+                return tempNode;
+            }
+        }
+        return null;
     }
 
     //method for displaying output
