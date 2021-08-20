@@ -61,17 +61,6 @@ public class MyLinkedList {
         tempNode.setNext(null);
     }
 
-    //method for search element in linked list
-    public INode search() {
-        INode tempNode = head;
-        while (tempNode != null && tempNode.getNext() != null) {
-            if (tempNode.getKey().equals(head)) {
-                return tempNode;
-            }
-        }
-        return null;
-    }
-
     //method for displaying output
     public void printMyNodes() {
         StringBuilder myNodes = new StringBuilder("My Nodes : ");
@@ -84,5 +73,4 @@ public class MyLinkedList {
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
-
 }
